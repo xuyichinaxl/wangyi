@@ -1,0 +1,76 @@
+page-home {
+    .bodyBackground{
+        background: #E7DFDF;
+    }
+    .header{
+        height: 40px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-left: 20px;
+        padding-right: 10px;
+        z-index: 999;
+    }
+    .header-left{
+        color: white;
+        background: none;
+        margin-right: 28px;
+        display: block;
+        float: left;
+    }
+    .header-saoyisao{margin-top: 10px;}
+    .header-saoyisao .ion-ios-saoyisao:before{font-size: 20px;}
+    .header-yue{margin-top: 9px;}
+    .header-yue .ion-ios-yue:before{font-size: 22px;}
+    .header-qiaquan{margin-top: 5px;}
+    .header-qiaquan .ion-ios-qiaquan:before{font-size: 30px;}
+
+    .logo{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        width: 90px;
+    }
+
+    .header-zhangdan{float: right;line-height: 40px;}
+    .header-zhangdan ion-icon{vertical-align: middle;}
+    .header-zhangdan span{padding-left: 4px;font-size: 14px;}
+
+    .blank{height: 40px;}
+
+    .indexCate{
+        display: flex;
+        flex-flow:row,nowrap;
+        align-items:flex-start;
+        background: red;
+        color: white;
+    }
+    .indexCateItem{
+        flex: 1;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 8px;
+    }
+    .indexCateItem p{margin: 0;}
+    .indexCateItem ion-icon{margin-bottom: 5px;}
+    .indexCateItem-saoyisao .ion-ios-saoyisao:before{font-size: 28px;}
+    .indexCateItem-yue{padding-top: 16px;}
+    .indexCateItem-yue .ion-ios-yue:before{font-size: 33px;}
+    .indexCateItem-qiaquan{padding-top: 10px;}
+    .indexCateItem-qiaquan .ion-ios-qiaquan:before{font-size: 40px;}
+
+    .indexCateItem-yue-count{color: #F9F3F3;margin-top: 4px;}
+
+    .banner{background: #E7DFDF;padding: 6px 0;}
+    .banner img{display: block;}
+
+    .category{padding-top: 20px;margin-bottom: 40px;background: white;}
+    .categoryItem{margin-bottom: 16px;text-align: center;}
+    .categoryItemImgBox{width: 50px;height: 50px;margin: 0 auto;position: relative;margin-bottom: 5px;border-radius: 40%;border:1px solid #999;}
+    .categoryItemImgBox img{width: 30px;position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;}
+    .categoryItem p{margin: 0;}
+}

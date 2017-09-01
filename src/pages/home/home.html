@@ -1,0 +1,56 @@
+<ion-content class="bodyBackground">
+  <!-- 头部 -->
+  <div class="header" [style.background]="navsBackground">
+
+    <span class="header-left header-saoyisao"><ion-icon name="saoyisao"></ion-icon></span>
+    <span class="header-left header-yue"><ion-icon name="yue"></ion-icon></span>
+    <span class="header-left header-qiaquan"><ion-icon name="qiaquan"></ion-icon></span>
+    <img class="logo" src="assets/images/logo.png" alt="logo" [style.opacity]="logoOpacity">
+    <span class="header-zhangdan" [style.color]="zhangdan"><ion-icon name="zhangdan"></ion-icon><span>账单</span></span>
+  </div>
+  <div class=blank></div>
+
+  <!-- 卡券，余额，扫一扫 -->
+  <div class=indexCate>
+    <div class="indexCateItem indexCateItem-saoyisao" [style.opacity]="indexCateItemOpacity">
+      <ion-icon name="saoyisao"></ion-icon>
+      <p>扫一扫</p>
+    </div>
+    <div class="indexCateItem indexCateItem-yue" [style.opacity]="indexCateItemOpacity">
+      <ion-icon name="yue"></ion-icon>
+      <p>余额</p>
+      <p class=indexCateItem-yue-count>0.00</p>
+    </div>
+    <div class="indexCateItem indexCateItem-qiaquan" [style.opacity]="indexCateItemOpacity">
+      <ion-icon name="qiaquan"></ion-icon>
+      <p>卡券</p>
+    </div>
+  </div>
+
+  <!-- 广告 -->
+  <div class="banner">
+    <ion-slides pager autoplay="3000" loop=true speed=500>
+      <ion-slide>
+        <img src="assets/images/banner1.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/images/banner2.jpg" alt="">
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <!-- 类别 -->
+  <div class=category>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let categoryItem of categoryItems" col-4 class="categoryItem" (click)="pushOtherPage(categoryItem.page)">
+          <div class="categoryItemImgBox"><img src="{{categoryItem.img}}" alt=""></div>
+          <p>{{categoryItem.name}}</p>
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+</ion-content>
