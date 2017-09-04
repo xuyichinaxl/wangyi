@@ -1,0 +1,36 @@
+my-header {
+    .headerCom{
+        height: 40px;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .headerCom .back{
+        height: 40px;
+        font-size: 24px;
+        background: none;
+        position: absolute;
+        left: 8px;
+        top: 0;
+    }
+    .headerCom h4{
+        text-align: center;
+        margin: 0;
+        line-height: 40px;
+        font-size: 18px;
+    }
+    .headerCom .right{
+        position: absolute;
+        right: 8px;
+        top: 0;
+        line-height: 40px;
+        background: none;
+        font-size: 16px;
+    }
+    .blank{
+        height: 40px;
+    }
+}

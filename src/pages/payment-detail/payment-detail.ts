@@ -2,26 +2,26 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the GameRechargePage page.
+ * Generated class for the PaymentDetailPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 
 @IonicPage({
-  name:"gameRecharge"
+  name:"paymentDetail"
 })
 @Component({
-  selector: 'page-game-recharge',
-  templateUrl: 'game-recharge.html',
+  selector: 'page-payment-detail',
+  templateUrl: 'payment-detail.html',
 })
-export class GameRechargePage {
+export class PaymentDetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad GameRechargePage');
+    console.log('ionViewDidLoad PaymentDetailPage');
   }
 
 }

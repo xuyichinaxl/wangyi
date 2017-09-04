@@ -1,4 +1,4 @@
-<ion-content class="bodyBackground">
+<ion-content class="bodyBackground" (ionScrollEnd)="topPosition($event)">
   <!-- 头部 -->
   <div class="header" [style.background]="navsBackground">
 
@@ -6,12 +6,12 @@
     <span class="header-left header-yue"><ion-icon name="yue"></ion-icon></span>
     <span class="header-left header-qiaquan"><ion-icon name="qiaquan"></ion-icon></span>
     <img class="logo" src="assets/images/logo.png" alt="logo" [style.opacity]="logoOpacity">
-    <span class="header-zhangdan" [style.color]="zhangdan"><ion-icon name="zhangdan"></ion-icon><span>账单</span></span>
+    <span class="header-zhangdan" tappable (click)="toZhangDan()" [style.color]="zhangdan"><ion-icon name="zhangdan"></ion-icon><span>账单</span></span>
   </div>
   <div class=blank></div>
 
   <!-- 卡券，余额，扫一扫 -->
-  <div class=indexCate>
+  <div #indexCate class=indexCate>
     <div class="indexCateItem indexCateItem-saoyisao" [style.opacity]="indexCateItemOpacity">
       <ion-icon name="saoyisao"></ion-icon>
       <p>扫一扫</p>
@@ -43,7 +43,7 @@
   <div class=category>
     <ion-grid>
       <ion-row>
-        <ion-col *ngFor="let categoryItem of categoryItems" col-4 class="categoryItem" (click)="pushOtherPage(categoryItem.page)">
+        <ion-col tappable *ngFor="let categoryItem of categoryItems" col-4 class="categoryItem" (click)="pushOtherPage(categoryItem.page)">
           <div class="categoryItemImgBox"><img src="{{categoryItem.img}}" alt=""></div>
           <p>{{categoryItem.name}}</p>
         </ion-col>

@@ -10,6 +10,8 @@ export class HomePage {
 
   @ViewChild(Slides) slides:Slides
 
+  @ViewChild("indexCate") indexCate;
+
   eve:any;
   navsBackground:string = "rgba(255,255,255,1)";
   logoOpacity:number = 1;
@@ -27,8 +29,8 @@ export class HomePage {
         this.eve = $event;
         let top = this.eve.scrollTop;
         this.logoOpacity = 1-top*0.1 > 0?(1-top*0.1):0;
-        if(top>20){
-          top = top-20;
+        if(top>30){
+          top = top-30;
           let navsOpacity = top * 0.01;//导航透明度渐变
           let zhangdanColor = 255*top*0.05>255?255:255*top*0.05;
           this.zhangdan = `rgb(${zhangdanColor},${zhangdanColor},${zhangdanColor})`;
@@ -45,15 +47,15 @@ export class HomePage {
     });
 
     this.categoryItems = [
-      new CategoryItem("GameRechargePage","游戏充值","assets/images/chongzhi.png"),
-      new CategoryItem("GameRechargePage","游戏充值","assets/images/chongzhi.png"),
-      new CategoryItem("GameRechargePage","游戏充值","assets/images/chongzhi.png"),
-      new CategoryItem("GameRechargePage","游戏充值","assets/images/chongzhi.png"),
-      new CategoryItem("GameRechargePage","游戏充值","assets/images/chongzhi.png"),
-      new CategoryItem("GameRechargePage","游戏充值","assets/images/chongzhi.png"),
-      new CategoryItem("GameRechargePage","游戏充值","assets/images/chongzhi.png"),
-      new CategoryItem("GameRechargePage","游戏充值","assets/images/chongzhi.png"),
-      new CategoryItem("GameRechargePage","游戏充值","assets/images/chongzhi.png"),
+      new CategoryItem("gameRecharge","游戏充值","assets/images/chongzhi.png"),
+      new CategoryItem("gameRecharge","游戏充值","assets/images/chongzhi.png"),
+      new CategoryItem("gameRecharge","游戏充值","assets/images/chongzhi.png"),
+      new CategoryItem("gameRecharge","游戏充值","assets/images/chongzhi.png"),
+      new CategoryItem("gameRecharge","游戏充值","assets/images/chongzhi.png"),
+      new CategoryItem("gameRecharge","游戏充值","assets/images/chongzhi.png"),
+      new CategoryItem("gameRecharge","游戏充值","assets/images/chongzhi.png"),
+      new CategoryItem("gameRecharge","游戏充值","assets/images/chongzhi.png"),
+      new CategoryItem("gameRecharge","游戏充值","assets/images/chongzhi.png"),
     ]
   }
 
@@ -68,6 +70,27 @@ export class HomePage {
 
   pushOtherPage(page){
     this.navCtrl.push(page);
+  }
+
+  toZhangDan(){
+    this.navCtrl.push("zhangDan");
+  }
+
+  //固定导航栏的位置
+  topPosition(event){
+    if(event){
+      let oTop = this.indexCate.nativeElement.scrollHeight + this.indexCate.nativeElement.style.height;
+      console.log(oTop)
+      let top = event.scrollTop || 0;
+      if(top<=30 && top!=0){
+        this.content.scrollToTop();
+      }else if(top>30 && top<=oTop){
+        this.content.scrollTo(0,oTop);
+      }
+    }else{
+      return null;
+    }
+    
   }
 
 }

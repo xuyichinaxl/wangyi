@@ -1,0 +1,7 @@
+<!-- Generated template for the HeaderComponent component -->
+<div class="headerCom">
+    <button class=back (click)="backHistory()"><ion-icon name="arrow-back"></ion-icon></button>
+    <h4>{{name}}</h4>
+    <button class=right [hidden]="next==null && nextUrl==null" (click)="rightPage()">{{next}}</button>
+</div>
+<div class=blank></div>

@@ -1,0 +1,39 @@
+
+
+page-zhangdan {
+    .toolbar{
+        padding: 0;
+        position: fixed;
+        top: 40px;
+        left: 0;
+        right: 0;
+        .toolbarItem{
+            max-width: none;
+            border: 0;
+            border-radius: 0;
+            color: black;
+            position: relative;
+            overflow: visible;
+        }
+        .toolbarItem:first-of-type{
+            border-radius: 0;
+        }
+        .toolbarItem:last-of-type{
+            border-radius: 0;
+        }
+        .toolbarItem.segment-activated{
+            background: none;
+            color: #F40B0B;
+        }
+        .toolbarItem.segment-activated:after{
+            content: "";
+            height: 2px;
+            background: #F40B0B;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+        }
+    }
+    
+}
